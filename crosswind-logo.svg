@@ -1,52 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
   <defs>
-    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#e8e8e8;stop-opacity:1" />
+    <!-- Dark background gradient -->
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a252f;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Metallic silver gradient for logo elements -->
+    <linearGradient id="silverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#e9ecef;stop-opacity:1" />
       <stop offset="50%" style="stop-color:#c0c0c0;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#a0a0a0;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#adb5bd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#868e96;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Darker metallic for depth -->
+    <linearGradient id="darkSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#adb5bd;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#868e96;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6c757d;stop-opacity:1" />
     </linearGradient>
   </defs>
   
-  <!-- Wings -->
-  <g fill="url(#metalGradient)" stroke="#888" stroke-width="1">
-    <!-- Left wing -->
-    <path d="M20 40 L80 30 L80 35 L35 45 L80 55 L80 60 L20 50 Z"/>
-    <path d="M20 50 L70 42 L70 47 L35 55 L70 63 L70 68 L20 60 Z"/>
-    <path d="M20 60 L60 54 L60 59 L35 65 L60 71 L60 76 L20 70 Z"/>
-    
-    <!-- Right wing -->
-    <path d="M380 40 L320 30 L320 35 L365 45 L320 55 L320 60 L380 50 Z"/>
-    <path d="M380 50 L330 42 L330 47 L365 55 L330 63 L330 68 L380 60 Z"/>
-    <path d="M380 60 L340 54 L340 59 L365 65 L340 71 L340 76 L380 70 Z"/>
+  <!-- Dark background -->
+  <rect width="800" height="400" fill="url(#bgGradient)" rx="20"/>
+  
+  <!-- Left wing -->
+  <g fill="url(#silverGradient)" stroke="url(#darkSilver)" stroke-width="2">
+    <!-- Main wing sections -->
+    <path d="M50 160 L220 120 L220 140 L80 170 L220 200 L220 220 L50 180 Z"/>
+    <path d="M50 180 L200 150 L200 170 L80 190 L200 210 L200 230 L50 200 Z"/>
+    <path d="M50 200 L180 180 L180 200 L80 210 L180 220 L180 240 L50 220 Z"/>
+    <path d="M50 220 L160 210 L160 230 L80 230 L160 240 L160 260 L50 240 Z"/>
   </g>
   
-  <!-- Shield -->
-  <path d="M120 20 L280 20 L290 30 L290 80 L200 100 L110 80 L110 30 Z" 
-        fill="none" 
-        stroke="url(#metalGradient)" 
-        stroke-width="3"/>
+  <!-- Right wing -->
+  <g fill="url(#silverGradient)" stroke="url(#darkSilver)" stroke-width="2">
+    <!-- Main wing sections -->
+    <path d="M750 160 L580 120 L580 140 L720 170 L580 200 L580 220 L750 180 Z"/>
+    <path d="M750 180 L600 150 L600 170 L720 190 L600 210 L600 230 L750 200 Z"/>
+    <path d="M750 200 L620 180 L620 200 L720 210 L620 220 L620 240 L750 220 Z"/>
+    <path d="M750 220 L640 210 L640 230 L720 230 L640 240 L640 260 L750 240 Z"/>
+  </g>
   
-  <!-- Windsock inside shield -->
-  <g fill="url(#metalGradient)">
+  <!-- Central shield -->
+  <g fill="none" stroke="url(#silverGradient)" stroke-width="6">
+    <path d="M280 90 L520 90 L540 110 L540 280 L400 340 L260 280 L260 110 Z"/>
+  </g>
+  
+  <!-- Shield inner fill -->
+  <path d="M280 90 L520 90 L540 110 L540 280 L400 340 L260 280 L260 110 Z" 
+        fill="url(#bgGradient)" opacity="0.3"/>
+  
+  <!-- Windsock pole inside shield -->
+  <g fill="url(#silverGradient)" stroke="url(#darkSilver)" stroke-width="1">
     <!-- Pole -->
-    <rect x="140" y="35" width="2" height="30" />
-    <circle cx="141" cy="35" r="3"/>
-    
+    <rect x="370" y="140" width="6" height="100"/>
+    <!-- Top mounting -->
+    <circle cx="373" cy="140" r="8" fill="url(#silverGradient)"/>
     <!-- Windsock segments -->
-    <path d="M143 35 L180 38 L180 45 L143 42 Z"/>
-    <path d="M143 42 L175 44 L175 51 L143 49 Z"/>
-    <path d="M143 49 L170 50 L170 57 L143 56 Z"/>
+    <path d="M378 145 L450 155 L450 175 L378 165 Z"/>
+    <path d="M378 165 L440 172 L440 192 L378 185 Z"/>
+    <path d="M378 185 L430 189 L430 209 L378 205 Z"/>
+    <path d="M378 205 L420 206 L420 226 L378 225 Z"/>
   </g>
   
-  <!-- Runway inside shield -->
-  <g fill="url(#metalGradient)">
-    <rect x="170" y="75" width="30" height="3"/>
-    <rect x="175" y="80" width="3" height="8"/>
-    <rect x="185" y="80" width="3" height="8"/>
-    <rect x="195" y="80" width="3" height="8"/>
+  <!-- Runway centerline -->
+  <g fill="url(#silverGradient)">
+    <rect x="360" y="260" width="80" height="4"/>
+    <!-- Runway markings -->
+    <rect x="370" y="270" width="4" height="15"/>
+    <rect x="385" y="270" width="4" height="15"/>
+    <rect x="400" y="270" width="4" height="15"/>
+    <rect x="415" y="270" width="4" height="15"/>
+    <rect x="430" y="270" width="4" height="15"/>
   </g>
   
-  <!-- Text -->
-  <text x="200" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="url(#metalGradient)">CROSSWIND</text>
-  <text x="200" y="118" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="url(#metalGradient)">COACHING</text>
+  <!-- CROSSWIND text -->
+  <text x="400" y="360" 
+        font-family="Arial Black, Arial, sans-serif" 
+        font-size="48" 
+        font-weight="900" 
+        text-anchor="middle" 
+        fill="url(#silverGradient)" 
+        stroke="url(#darkSilver)" 
+        stroke-width="1">CROSSWIND</text>
+  
+  <!-- COACHING text -->
+  <text x="400" y="390" 
+        font-family="Arial Black, Arial, sans-serif" 
+        font-size="32" 
+        font-weight="900" 
+        text-anchor="middle" 
+        fill="url(#silverGradient)" 
+        stroke="url(#darkSilver)" 
+        stroke-width="1">COACHING</text>
 </svg>

@@ -685,7 +685,6 @@ select.form-control {
     height: 40px;
     width: auto;
     max-width: 200px;
-    filter: brightness(0) invert(1); /* Makes the logo white */
     display: block;
 }
 
@@ -1561,7 +1560,6 @@ select.form-control {
     width: auto;
     max-width: 250px;
     margin-bottom: var(--space-12);
-    filter: brightness(0) invert(1); /* Makes the logo white */
     display: block;
 }
 
