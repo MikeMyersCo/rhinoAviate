@@ -681,6 +681,13 @@ select.form-control {
     font-weight: var(--font-weight-bold);
 }
 
+.navbar__logo {
+    height: 40px;
+    width: auto;
+    max-width: 200px;
+    filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
 .navbar__menu {
     display: flex;
     align-items: center;
@@ -1548,6 +1555,14 @@ select.form-control {
     margin-bottom: var(--space-12);
 }
 
+.footer__logo {
+    height: 60px;
+    width: auto;
+    max-width: 250px;
+    margin-bottom: var(--space-12);
+    filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
 .footer-brand p {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
@@ -1593,6 +1608,16 @@ select.form-control {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar__logo {
+        height: 32px;
+        max-width: 150px;
+    }
+    
+    .footer__logo {
+        height: 50px;
+        max-width: 200px;
+    }
+
     .navbar__menu {
         display: none;
         position: absolute;
