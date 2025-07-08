@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crosswind Coaching - Helping Pilots Get Hired</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__content">
+                <div class="navbar__brand">
+                    <h2>✈️ Crosswind Coaching</h2>
+                </div>
+                <div class="navbar__menu">
+                    <a href="#" class="nav-link" data-page="home">Home</a>
+                    <a href="#" class="nav-link" data-page="services">Services</a>
+                    <a href="#" class="nav-link" data-page="testimonials">Testimonials</a>
+                    <a href="#" class="nav-link" data-page="resources">Resources</a>
+                    <a href="#" class="nav-link" data-page="contact">Contact</a>
+                    <a href="#" class="btn btn--primary btn--sm" data-page="booking">Get Started</a>
+                </div>
+                <button class="navbar__toggle" id="navToggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Homepage -->
+        <div id="home-page" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__content">
+                        <div class="hero__text">
+                            <h1 class="hero__title">Helping Pilots Get Hired</h1>
+                            <p class="hero__subtitle">Professional resume reviews and rewrites for airline, corporate, and military-transitioning pilots.</p>
+                            <button class="btn btn--primary btn--lg" data-page="services">Get Started</button>
+                        </div>
+                        <div class="hero__image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1751407667/pplx_project_search_images/6f90541fc3716ed4d0e60467e39041ac78948ec2.jpg" alt="Professional pilot in uniform" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Background Section -->
+            <section class="background-section">
+                <div class="container">
+                    <div class="background__content">
+                        <div class="background__image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1751407667/pplx_project_search_images/779c21f111686ff266001e4a22e1f0a192276700.jpg" alt="Professional female pilot" />
+                        </div>
+                        <div class="background__text">
+                            <h2>Your Aviation Career Expert</h2>
+                            <p>With over 15 years in aviation and extensive experience helping pilots transition to major airlines, I understand what recruiters look for. My LinkedIn network includes key decision-makers at Delta, United, FedEx, and NetJets.</p>
+                            <ul class="credentials-list">
+                                <li>✈️ ATP Certified with 8,000+ flight hours</li>
+                                <li>📈 200+ successful pilot placements</li>
+                                <li>🏆 92% client interview success rate</li>
+                                <li>💼 Former airline training captain</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Overview -->
+            <section class="services-overview">
+                <div class="container">
+                    <h2 class="section-title">How I Help Pilots Succeed</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-card__icon">📋</div>
+                            <h3>Basic Resume Review</h3>
+                            <p>Comprehensive analysis and feedback to improve your current resume.</p>
+                            <div class="price">$99</div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card__icon">✨</div>
+                            <h3>Premium Resume Rewrite</h3>
+                            <p>Complete professional rewrite with cover letter and LinkedIn optimization.</p>
+                            <div class="price">$299</div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card__icon">💼</div>
+                            <h3>LinkedIn Profile Tune-Up</h3>
+                            <p>Optimize your LinkedIn presence to attract recruiters and networking opportunities.</p>
+                            <div class="price">$99</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Final CTA -->
+            <section class="final-cta">
+                <div class="container">
+                    <h2>Ready to Get Noticed?</h2>
+                    <p>Join hundreds of pilots who've accelerated their careers with professional resume services.</p>
+                    <button class="btn btn--primary btn--lg" data-page="booking">Book a Review Now</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Services Page -->
+        <div id="services-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Professional Resume Services</h1>
+                    <p>Choose the package that best fits your career goals</p>
+                </div>
+            </section>
+
+            <section class="services-detailed">
+                <div class="container">
+                    <div class="services-comparison">
+                        <div class="service-package">
+                            <div class="package-header">
+                                <h3>Basic Resume Review</h3>
+                                <div class="package-price">$99</div>
+                                <div class="package-turnaround">3 business days</div>
+                            </div>
+                            <div class="package-deliverables">
+                                <h4>✅ What's Included:</h4>
+                                <ul>
+                                    <li>Comprehensive resume analysis</li>
+                                    <li>Written feedback report</li>
+                                    <li>Industry-specific recommendations</li>
+                                    <li>ATS optimization tips</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn--outline btn--full-width" data-package="basic">Book This Package</button>
+                        </div>
+
+                        <div class="service-package featured">
+                            <div class="package-badge">Most Popular</div>
+                            <div class="package-header">
+                                <h3>Premium Resume Rewrite</h3>
+                                <div class="package-price">$299</div>
+                                <div class="package-turnaround">5 business days</div>
+                            </div>
+                            <div class="package-deliverables">
+                                <h4>✅ What's Included:</h4>
+                                <ul>
+                                    <li>Complete resume rewrite</li>
+                                    <li>Cover letter creation</li>
+                                    <li>LinkedIn profile optimization</li>
+                                    <li>Two rounds of revisions</li>
+                                    <li>Industry keyword optimization</li>
+                                    <li>ATS-friendly formatting</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn--primary btn--full-width" data-package="premium">Book This Package</button>
+                        </div>
+
+                        <div class="service-package">
+                            <div class="package-header">
+                                <h3>LinkedIn Profile Tune-Up</h3>
+                                <div class="package-price">$99</div>
+                                <div class="package-turnaround">2 business days</div>
+                            </div>
+                            <div class="package-deliverables">
+                                <h4>✅ What's Included:</h4>
+                                <ul>
+                                    <li>Profile headline optimization</li>
+                                    <li>Summary section rewrite</li>
+                                    <li>Experience descriptions</li>
+                                    <li>Skills and endorsements strategy</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn--outline btn--full-width" data-package="linkedin">Book This Package</button>
+                        </div>
+
+                    </div>
+
+                    <div class="add-ons-section">
+                        <h3>Optional Add-ons</h3>
+                        <div class="add-ons-grid">
+                            <div class="add-on-item">
+                                <h4>LinkedIn Optimization</h4>
+                                <p>Professional LinkedIn makeover</p>
+                                <span class="add-on-price">+$99</span>
+                            </div>
+                            <div class="add-on-item">
+                                <h4>Cover Letter Creation</h4>
+                                <p>Tailored cover letter template</p>
+                                <span class="add-on-price">+$99</span>
+                            </div>
+                            <div class="add-on-item">
+                                <h4>Airline-Specific Targeting</h4>
+                                <p>Resume optimized for specific airline</p>
+                                <span class="add-on-price">+$199</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Booking Page -->
+        <div id="booking-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Book Your Service</h1>
+                    <p>Complete the form below to get started</p>
+                </div>
+            </section>
+
+            <section class="booking-form-section">
+                <div class="container">
+                    <div class="booking-progress">
+                        <div class="progress-step active">1. Package Selection</div>
+                        <div class="progress-step">2. Information</div>
+                        <div class="progress-step">3. Payment</div>
+                        <div class="progress-step">4. Confirmation</div>
+                    </div>
+
+                    <form id="booking-form" class="booking-form">
+                        <div class="form-step active" id="step-1">
+                            <h3>Select Your Package</h3>
+                            <div class="package-selection">
+                                <label class="package-option">
+                                    <input type="radio" name="package" value="basic">
+                                    <div class="package-card">
+                                        <h4>Basic Resume Review - $99</h4>
+                                        <p>Comprehensive analysis and feedback</p>
+                                    </div>
+                                </label>
+                                <label class="package-option">
+                                    <input type="radio" name="package" value="premium">
+                                    <div class="package-card">
+                                        <h4>Premium Resume Rewrite - $299</h4>
+                                        <p>Complete rewrite with cover letter</p>
+                                    </div>
+                                </label>
+                                <label class="package-option">
+                                    <input type="radio" name="package" value="linkedin">
+                                    <div class="package-card">
+                                        <h4>LinkedIn Profile Tune-Up - $99</h4>
+                                        <p>Professional LinkedIn optimization</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <button type="button" class="btn btn--primary" onclick="nextStep()">Continue</button>
+                        </div>
+
+                        <div class="form-step" id="step-2">
+                            <h3>Your Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Current Flight Hours</label>
+                                <input type="number" class="form-control" name="flightHours">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Current Position/Experience</label>
+                                <select class="form-control" name="experience" required>
+                                    <option value="">Select your background</option>
+                                    <option value="military">Military Pilot</option>
+                                    <option value="regional">Regional Airline Pilot</option>
+                                    <option value="corporate">Corporate Aviation</option>
+                                    <option value="cfi">Flight Instructor</option>
+                                    <option value="cargo">Cargo Pilot</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Career Goals</label>
+                                <textarea class="form-control" name="goals" rows="3" placeholder="What type of position are you targeting?"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Upload Current Resume (Optional)</label>
+                                <input type="file" class="form-control" name="resume" accept=".pdf,.doc,.docx">
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn--secondary" onclick="prevStep()">Back</button>
+                                <button type="button" class="btn btn--primary" onclick="nextStep()">Continue</button>
+                            </div>
+                        </div>
+
+                        <div class="form-step" id="step-3">
+                            <h3>Payment Information</h3>
+                            <div class="payment-summary">
+                                <h4>Order Summary</h4>
+                                <div class="summary-line">
+                                    <span id="selected-package">Package</span>
+                                    <span id="package-price">$0</span>
+                                </div>
+                                <div class="summary-total">
+                                    <strong>Total: <span id="total-price">$0</span></strong>
+                                </div>
+                            </div>
+                            <div class="payment-form">
+                                <div class="form-group">
+                                    <label class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Expiry Date</label>
+                                        <input type="text" class="form-control" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">CVV</label>
+                                        <input type="text" class="form-control" placeholder="123" maxlength="4">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Cardholder Name</label>
+                                    <input type="text" class="form-control" placeholder="John Smith">
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn--secondary" onclick="prevStep()">Back</button>
+                                <button type="button" class="btn btn--primary" onclick="nextStep()">Complete Payment</button>
+                            </div>
+                        </div>
+
+                        <div class="form-step" id="step-4">
+                            <div class="confirmation-message">
+                                <div class="confirmation-icon">✅</div>
+                                <h3>Payment Successful!</h3>
+                                <p>Thank you for your order. You'll receive a confirmation email shortly.</p>
+                                <div class="next-steps">
+                                    <h4>What happens next:</h4>
+                                    <ul>
+                                        <li>You'll receive a detailed questionnaire within 24 hours</li>
+                                        <li>Our team will begin working on your project immediately</li>
+                                        <li>Expect delivery within the specified turnaround time</li>
+                                        <li>We'll send updates throughout the process</li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn btn--primary" data-page="home">Return to Home</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- Testimonials Page -->
+        <div id="testimonials-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Success Stories</h1>
+                    <p>Real results from pilots who transformed their careers</p>
+                </div>
+            </section>
+
+            <section class="testimonials-grid">
+                <div class="container">
+                    <div class="testimonials-layout">
+                        <div class="testimonial-full">
+                            <div class="testimonial-content">
+                                <div class="quote-large">"The resume rewrite completely transformed my military experience into airline-relevant skills. I got 3 interviews within 2 weeks!"</div>
+                                <div class="testimonial-author-large">
+                                    <strong>Mike Thompson</strong><br>
+                                    Former F-16 Pilot, Now Captain at Southwest Airlines<br>
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-quote">"Professional, thorough, and results-driven. My new resume opened doors I didn't even know existed in corporate aviation."</div>
+                            <div class="testimonial-author">
+                                <strong>Sarah Chen</strong><br>
+                                Corporate Pilot at NetJets<br>
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-quote">"Worth every penny. The LinkedIn optimization alone generated multiple recruiter contacts."</div>
+                            <div class="testimonial-author">
+                                <strong>David Rodriguez</strong><br>
+                                First Officer at United Airlines<br>
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-quote">"Helped me navigate the civilian transition perfectly. Now I have my dream cargo pilot position."</div>
+                            <div class="testimonial-author">
+                                <strong>Jennifer Walsh</strong><br>
+                                C-130 Pilot transitioning to FedEx<br>
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-quote">"The career coaching session was invaluable. I learned strategies I never would have thought of on my own."</div>
+                            <div class="testimonial-author">
+                                <strong>Robert Kim</strong><br>
+                                Regional Pilot at Envoy Air<br>
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-quote">"From military to major airline in 6 months. The resume rewrite made all the difference."</div>
+                            <div class="testimonial-author">
+                                <strong>Amanda Foster</strong><br>
+                                Former Navy Pilot, Now First Officer at American Airlines<br>
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-form-section">
+                        <h3>Share Your Success Story</h3>
+                        <form class="feedback-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Current Position</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Your Success Story</label>
+                                <textarea class="form-control" rows="4" placeholder="Tell us about your career success..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Rating</label>
+                                <select class="form-control" required>
+                                    <option value="">Select rating</option>
+                                    <option value="5">⭐⭐⭐⭐⭐ (5 stars)</option>
+                                    <option value="4">⭐⭐⭐⭐ (4 stars)</option>
+                                    <option value="3">⭐⭐⭐ (3 stars)</option>
+                                    <option value="2">⭐⭐ (2 stars)</option>
+                                    <option value="1">⭐ (1 star)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn--primary">Submit Feedback</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Resources Page -->
+        <div id="resources-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Aviation Career Resources</h1>
+                    <p>Expert insights and guides for pilot career advancement</p>
+                </div>
+            </section>
+
+            <section class="resources-content">
+                <div class="container">
+                    <div class="featured-article">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1749444395/pplx_project_search_images/5d9986f0d097776203f67aa94d43d345a354fa21.jpg" alt="Professional pilot resume example" />
+                        <div class="featured-content">
+                            <h2>Top 5 Resume Mistakes Airline Recruiters Notice First</h2>
+                            <p>Learn the critical errors that can sink your pilot resume before it even reaches a human reviewer. These common mistakes cost pilots valuable interview opportunities.</p>
+                            <span class="article-date">June 15, 2024</span>
+                            <a href="#" class="btn btn--outline">Read Full Article</a>
+                        </div>
+                    </div>
+
+                    <div class="articles-grid">
+                        <article class="article-card">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1751407668/pplx_project_search_images/5d0971f9bb74f8f69a61c905599a39f907ccc174.jpg" alt="Aircraft cockpit" />
+                            <div class="article-content">
+                                <h3>Military to Civilian: Translating Your Experience</h3>
+                                <p>How to effectively communicate military aviation experience to civilian airline recruiters.</p>
+                                <span class="article-date">June 10, 2024</span>
+                                <a href="#" class="article-link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1748594493/pplx_project_search_images/610f7cc2e3c2bbaeb9ce7394d520e84fe32db09e.jpg" alt="Modern cockpit displays" />
+                            <div class="article-content">
+                                <h3>Corporate Aviation vs Airlines: Which Career Path?</h3>
+                                <p>Understanding the differences and making the right choice for your aviation career.</p>
+                                <span class="article-date">June 5, 2024</span>
+                                <a href="#" class="article-link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1751407667/pplx_project_search_images/b512db9edfb7d322ec71c5caff1376d8cb98c3e9.jpg" alt="Pilot resume example" />
+                            <div class="article-content">
+                                <h3>ATS Optimization for Pilot Resumes</h3>
+                                <p>How to format your resume to pass through applicant tracking systems successfully.</p>
+                                <span class="article-date">May 28, 2024</span>
+                                <a href="#" class="article-link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1749444395/pplx_project_search_images/406ebdaeb9d9d2bc7f0b0d8096f31450e71b8e6a.jpg" alt="Professional pilot resume" />
+                            <div class="article-content">
+                                <h3>Interview Preparation for Major Airlines</h3>
+                                <p>Essential tips and strategies to ace your airline pilot interview.</p>
+                                <span class="article-date">May 20, 2024</span>
+                                <a href="#" class="article-link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1751407667/pplx_project_search_images/b893935d2a20a0a3784582e0deb823dd32ee8c8a.jpg" alt="Airline pilot resume template" />
+                            <div class="article-content">
+                                <h3>LinkedIn Networking for Pilots</h3>
+                                <p>Build meaningful connections in the aviation industry to advance your career.</p>
+                                <span class="article-date">May 15, 2024</span>
+                                <a href="#" class="article-link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h3>2024 Pilot Hiring Trends</h3>
+                                <p>Industry insights on where airlines are hiring and what they're looking for.</p>
+                                <span class="article-date">May 10, 2024</span>
+                                <a href="#" class="article-link">Read More →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Contact Us</h1>
+                    <p>Ready to accelerate your aviation career? Let's talk.</p>
+                </div>
+            </section>
+
+            <section class="contact-content">
+                <div class="container">
+                    <div class="contact-layout">
+                        <div class="contact-form-section">
+                            <h3>Send us a message</h3>
+                            <form class="contact-form" id="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label">First Name</label>
+                                        <input type="text" class="form-control" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" name="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number (Optional)</label>
+                                    <input type="tel" class="form-control" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">How can I help you?</label>
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Tell me about your career goals and how I can assist you..." required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="package-option">
+                                        <input type="checkbox" name="consultation">
+                                        I'd like to schedule a 15-minute consultation call
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                            </form>
+                        </div>
+
+                        <div class="contact-info">
+                            <h3>Get in Touch</h3>
+                            <div class="contact-item">
+                                <strong>Email:</strong><br>
+                                hello@crosswindcoaching.com
+                            </div>
+                            <div class="contact-item">
+                                <strong>Phone:</strong><br>
+                                (555) 123-HIRE
+                            </div>
+                            <div class="contact-item">
+                                <strong>Response Time:</strong><br>
+                                Within 24 hours
+                            </div>
+
+                            <div class="social-links">
+                                <h4>Follow Us</h4>
+                                <a href="#" target="_blank" class="social-link">LinkedIn</a>
+                                <a href="#" target="_blank" class="social-link">Twitter</a>
+                                <a href="#" target="_blank" class="social-link">Facebook</a>
+                            </div>
+
+                            <div class="consultation-cta">
+                                <h4>Free 15-Minute Consultation</h4>
+                                <p>Schedule a quick call to discuss your career goals and how we can help.</p>
+                                <a href="#" class="btn btn--outline" target="_blank">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>✈️ Crosswind Coaching</h3>
+                    <p>Helping pilots achieve their career goals through professional resume services and career coaching.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <a href="#" data-page="services">Resume Review</a>
+                        <a href="#" data-page="services">Resume Rewrite</a>
+                        <a href="#" data-page="services">LinkedIn Optimization</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <a href="#" data-page="resources">Career Articles</a>
+                        <a href="#" data-page="testimonials">Success Stories</a>
+                        <a href="#" data-page="contact">Free Consultation</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <a href="#" data-page="contact">Contact</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Crosswind Coaching. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
