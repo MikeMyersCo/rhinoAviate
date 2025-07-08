@@ -686,6 +686,7 @@ select.form-control {
     width: auto;
     max-width: 200px;
     filter: brightness(0) invert(1); /* Makes the logo white */
+    display: block;
 }
 
 .navbar__menu {
@@ -1561,6 +1562,7 @@ select.form-control {
     max-width: 250px;
     margin-bottom: var(--space-12);
     filter: brightness(0) invert(1); /* Makes the logo white */
+    display: block;
 }
 
 .footer-brand p {

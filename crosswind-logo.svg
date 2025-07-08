@@ -1,59 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
   <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a2332;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#bdc3c7;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#95a5a6;stop-opacity:1" />
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e8e8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#c0c0c0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a0a0a0;stop-opacity:1" />
     </linearGradient>
   </defs>
   
-  <!-- Background -->
-  <rect width="512" height="512" fill="url(#bgGradient)"/>
-  
   <!-- Wings -->
-  <g fill="url(#logoGradient)">
+  <g fill="url(#metalGradient)" stroke="#888" stroke-width="1">
     <!-- Left wing -->
-    <path d="M50 200 L150 160 L150 180 L70 210 L150 240 L150 260 L50 220 Z"/>
-    <path d="M50 230 L130 200 L130 220 L70 240 L130 260 L130 280 L50 250 Z"/>
-    <path d="M50 260 L110 240 L110 260 L70 270 L110 280 L110 300 L50 280 Z"/>
+    <path d="M20 40 L80 30 L80 35 L35 45 L80 55 L80 60 L20 50 Z"/>
+    <path d="M20 50 L70 42 L70 47 L35 55 L70 63 L70 68 L20 60 Z"/>
+    <path d="M20 60 L60 54 L60 59 L35 65 L60 71 L60 76 L20 70 Z"/>
     
     <!-- Right wing -->
-    <path d="M462 200 L362 160 L362 180 L442 210 L362 240 L362 260 L462 220 Z"/>
-    <path d="M462 230 L382 200 L382 220 L442 240 L382 260 L382 280 L462 250 Z"/>
-    <path d="M462 260 L402 240 L402 260 L442 270 L402 280 L402 300 L462 280 Z"/>
+    <path d="M380 40 L320 30 L320 35 L365 45 L320 55 L320 60 L380 50 Z"/>
+    <path d="M380 50 L330 42 L330 47 L365 55 L330 63 L330 68 L380 60 Z"/>
+    <path d="M380 60 L340 54 L340 59 L365 65 L340 71 L340 76 L380 70 Z"/>
   </g>
   
   <!-- Shield -->
-  <path d="M180 120 L332 120 L350 140 L350 320 L256 380 L162 320 L162 140 Z" fill="none" stroke="url(#logoGradient)" stroke-width="8"/>
+  <path d="M120 20 L280 20 L290 30 L290 80 L200 100 L110 80 L110 30 Z" 
+        fill="none" 
+        stroke="url(#metalGradient)" 
+        stroke-width="3"/>
   
-  <!-- Windsock -->
-  <g fill="url(#logoGradient)">
+  <!-- Windsock inside shield -->
+  <g fill="url(#metalGradient)">
     <!-- Pole -->
-    <rect x="200" y="160" width="4" height="120" />
-    <circle cx="202" cy="160" r="6"/>
+    <rect x="140" y="35" width="2" height="30" />
+    <circle cx="141" cy="35" r="3"/>
     
     <!-- Windsock segments -->
-    <path d="M206 160 L280 170 L280 190 L206 180 Z"/>
-    <path d="M206 180 L270 188 L270 208 L206 200 Z"/>
-    <path d="M206 200 L260 206 L260 226 L206 220 Z"/>
-    <path d="M206 220 L250 224 L250 244 L206 240 Z"/>
+    <path d="M143 35 L180 38 L180 45 L143 42 Z"/>
+    <path d="M143 42 L175 44 L175 51 L143 49 Z"/>
+    <path d="M143 49 L170 50 L170 57 L143 56 Z"/>
   </g>
   
-  <!-- Runway -->
-  <g fill="url(#logoGradient)">
-    <rect x="230" y="300" width="52" height="8"/>
-    <rect x="240" y="315" width="8" height="20"/>
-    <rect x="256" y="315" width="8" height="20"/>
-    <rect x="272" y="315" width="8" height="20"/>
-    <rect x="240" y="345" width="8" height="20"/>
-    <rect x="256" y="345" width="8" height="20"/>
-    <rect x="272" y="345" width="8" height="20"/>
+  <!-- Runway inside shield -->
+  <g fill="url(#metalGradient)">
+    <rect x="170" y="75" width="30" height="3"/>
+    <rect x="175" y="80" width="3" height="8"/>
+    <rect x="185" y="80" width="3" height="8"/>
+    <rect x="195" y="80" width="3" height="8"/>
   </g>
   
   <!-- Text -->
-  <text x="256" y="420" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="url(#logoGradient)">CROSSWIND</text>
-  <text x="256" y="460" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="url(#logoGradient)">COACHING</text>
+  <text x="200" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="url(#metalGradient)">CROSSWIND</text>
+  <text x="200" y="118" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="url(#metalGradient)">COACHING</text>
 </svg>
