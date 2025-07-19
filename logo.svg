@@ -1,0 +1,50 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="silverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#e0e0e0;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#c0c0c0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a0a0a0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="darkSilverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d0d0d0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#b0b0b0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#909090;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Left Wing -->
+  <path d="M30 70 Q80 65 120 70 L120 75 Q80 72 35 77 Q32 75 30 70 Z" fill="url(#silverGradient)" stroke="#808080" stroke-width="1"/>
+  <path d="M25 80 Q75 75 120 80 L120 85 Q75 82 30 87 Q27 85 25 80 Z" fill="url(#silverGradient)" stroke="#808080" stroke-width="1"/>
+  <path d="M20 90 Q70 85 120 90 L120 95 Q70 92 25 97 Q22 95 20 90 Z" fill="url(#silverGradient)" stroke="#808080" stroke-width="1"/>
+  <path d="M15 100 Q65 95 120 100 L120 105 Q65 102 20 107 Q17 105 15 100 Z" fill="url(#silverGradient)" stroke="#808080" stroke-width="1"/>
+  
+  <!-- Right Wing -->
+  <path d="M180 70 Q220 65 270 70 Q273 72 275 75 Q270 77 265 77 Q225 72 180 75 L180 70 Z" fill="url(#silverGradient)" stroke="#808080" stroke-width="1"/>
+  <path d="M180 80 Q225 75 275 80 Q278 82 280 85 Q275 87 270 87 Q225 82 180 85 L180 80 Z" fill="url(#silverGradient)" stroke="#808080" stroke-width="1"/>
+  <path d="M180 90 Q230 85 280 90 Q283 92 285 95 Q280 97 275 97 Q230 92 180 95 L180 90 Z" fill="url(#silverGradient)" stroke="#808080" stroke-width="1"/>
+  <path d="M180 100 Q235 95 285 100 Q288 102 290 105 Q285 107 280 107 Q235 102 180 105 L180 100 Z" fill="url(#silverGradient)" stroke="#808080" stroke-width="1"/>
+  
+  <!-- Shield -->
+  <path d="M120 40 L180 40 L180 120 L150 140 L120 120 Z" fill="#1a2332" stroke="url(#silverGradient)" stroke-width="3"/>
+  
+  <!-- Windsock pole -->
+  <circle cx="135" cy="65" r="3" fill="url(#silverGradient)"/>
+  <rect x="138" y="63" width="4" height="4" fill="url(#silverGradient)"/>
+  
+  <!-- Windsock segments -->
+  <path d="M142 63 L152 60 L157 63 L157 67 L152 70 L142 67 Z" fill="url(#silverGradient)" stroke="#808080" stroke-width="0.5"/>
+  <path d="M157 63 L167 60 L172 63 L172 67 L167 70 L157 67 Z" fill="url(#darkSilverGradient)" stroke="#808080" stroke-width="0.5"/>
+  <path d="M172 63 L182 60 L187 63 L187 67 L182 70 L172 67 Z" fill="url(#silverGradient)" stroke="#808080" stroke-width="0.5"/>
+  
+  <!-- Runway -->
+  <rect x="140" y="90" width="20" height="6" fill="url(#silverGradient)" stroke="#808080" stroke-width="0.5"/>
+  <rect x="142" y="98" width="16" height="4" fill="url(#silverGradient)" stroke="#808080" stroke-width="0.5"/>
+  <rect x="144" y="104" width="12" height="4" fill="url(#silverGradient)" stroke="#808080" stroke-width="0.5"/>
+  <rect x="146" y="110" width="8" height="4" fill="url(#silverGradient)" stroke="#808080" stroke-width="0.5"/>
+  <rect x="148" y="116" width="4" height="4" fill="url(#silverGradient)" stroke="#808080" stroke-width="0.5"/>
+  
+  <!-- Company Text -->
+  <text x="150" y="165" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="url(#silverGradient)" letter-spacing="2px">CROSSWIND</text>
+  <text x="150" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="url(#silverGradient)" letter-spacing="4px">COACHING</text>
+</svg>
