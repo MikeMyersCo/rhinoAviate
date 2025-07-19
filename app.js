@@ -515,6 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add some interactive enhancements
     addScrollEffects();
     addHoverEffects();
+    addParallaxEffect();
 });
 
 function addScrollEffects() {
@@ -599,3 +600,16 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+function addParallaxEffect() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        
+        // Apply parallax transform to the hero pseudo-element background
+        hero.style.setProperty('--parallax-y', `${rate}px`);
+    });
+}
