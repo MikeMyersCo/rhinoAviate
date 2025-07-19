@@ -613,3 +613,51 @@ function addParallaxEffect() {
         hero.style.setProperty('--parallax-y', `${rate}px`);
     });
 }
+
+function copyVenmoUsername() {
+    const venmoHandle = '@CrosswindCoaching';
+    
+    // Try to use the modern clipboard API
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(venmoHandle).then(() => {
+            showCopyFeedback('Copied!');
+        }).catch(() => {
+            fallbackCopy(venmoHandle);
+        });
+    } else {
+        fallbackCopy(venmoHandle);
+    }
+}
+
+function fallbackCopy(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.opacity = '0';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+        showCopyFeedback('Copied!');
+    } catch (err) {
+        showCopyFeedback('Unable to copy');
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+function showCopyFeedback(message) {
+    const copyBtn = document.querySelector('.copy-btn');
+    if (!copyBtn) return;
+    
+    const originalText = copyBtn.textContent;
+    copyBtn.textContent = message;
+    copyBtn.style.background = '#28a745';
+    
+    setTimeout(() => {
+        copyBtn.textContent = originalText;
+        copyBtn.style.background = '';
+    }, 2000);
+}
