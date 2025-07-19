@@ -220,7 +220,12 @@
                         <div class="progress-step">4. Confirmation</div>
                     </div>
 
-                    <form id="booking-form" class="booking-form">
+                    <form id="booking-form" class="booking-form" action="https://formsubmit.co/RyanMyers34@gmail.com" method="POST" enctype="multipart/form-data">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Crosswind Coaching Booking">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        
                         <div class="form-step active" id="step-1">
                             <h3>Select Your Package</h3>
                             <div class="package-selection">
@@ -314,26 +319,26 @@
                             <div class="payment-form">
                                 <div class="form-group">
                                     <label class="form-label">Card Number</label>
-                                    <input type="text" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    <input type="text" class="form-control" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label class="form-label">Expiry Date</label>
-                                        <input type="text" class="form-control" placeholder="MM/YY" maxlength="5">
+                                        <input type="text" class="form-control" name="expiryDate" placeholder="MM/YY" maxlength="5">
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">CVV</label>
-                                        <input type="text" class="form-control" placeholder="123" maxlength="4">
+                                        <input type="text" class="form-control" name="cvv" placeholder="123" maxlength="4">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Cardholder Name</label>
-                                    <input type="text" class="form-control" placeholder="John Smith">
+                                    <input type="text" class="form-control" name="cardholderName" placeholder="John Smith">
                                 </div>
                             </div>
                             <div class="form-actions">
                                 <button type="button" class="btn btn--secondary" onclick="prevStep()">Back</button>
-                                <button type="button" class="btn btn--primary" onclick="nextStep()">Complete Payment</button>
+                                <button type="submit" class="btn btn--primary">Complete Payment</button>
                             </div>
                         </div>
 

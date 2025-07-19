@@ -483,19 +483,18 @@ function nextStep() {
         }
         
         if (nextStep === 4) {
-            // Simulate payment processing
+            // Submit the form to send email with resume
+            const form = document.getElementById('booking-form');
             const submitBtn = document.querySelector('.form-step.active .btn--primary');
-            if (submitBtn) {
+            if (submitBtn && form) {
                 submitBtn.classList.add('loading');
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Processing Payment...';
                 
+                // Submit the form after a brief delay to show processing
                 setTimeout(() => {
-                    window.aviationSite.showFormStep(nextStep);
-                    submitBtn.classList.remove('loading');
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Complete Payment';
-                }, 2000);
+                    form.submit();
+                }, 1000);
                 return;
             }
         }
