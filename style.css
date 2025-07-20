@@ -780,6 +780,7 @@ select.form-control {
     transition: background-position 0.1s ease-out;
 }
 
+
 .hero__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -847,6 +848,23 @@ select.form-control {
 .background__text h2 {
     margin-bottom: var(--space-16);
     color: var(--color-primary);
+}
+
+.bio-highlight {
+    background: linear-gradient(135deg, rgba(33, 128, 141, 0.08) 0%, rgba(33, 128, 141, 0.05) 100%);
+    border-left: 4px solid var(--color-primary);
+    padding: var(--space-20);
+    border-radius: var(--radius-base);
+    margin: var(--space-20) 0;
+    box-shadow: 0 2px 12px rgba(33, 128, 141, 0.1);
+}
+
+.bio-highlight p {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
 }
 
 .background__text p {
@@ -1775,11 +1793,24 @@ select.form-control {
     margin-bottom: var(--space-20);
 }
 
+.footer-logo {
+    margin-bottom: var(--space-16);
+}
+
+.footer-logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-8);
+    backdrop-filter: blur(5px);
+}
+
 .footer-brand h3 {
     color: white;
     margin-bottom: var(--space-12);
 }
-
 
 .footer-brand p {
     color: rgba(255, 255, 255, 0.8);
