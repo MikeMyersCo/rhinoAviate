@@ -228,6 +228,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  padding-top: 180px; /* Space for fixed navbar */
 }
 
 *,
@@ -1857,6 +1858,19 @@ select.form-control {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        padding-top: 100px; /* Reduced space for smaller mobile navbar */
+    }
+    
+    .navbar {
+        padding: var(--space-12) 0;
+    }
+    
+    .navbar__logo {
+        height: 60px;
+        padding: var(--space-6);
+    }
+    
     .navbar__menu {
         display: none;
         position: absolute;
