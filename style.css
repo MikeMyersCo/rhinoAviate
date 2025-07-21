@@ -817,12 +817,21 @@ select.form-control {
     max-width: 90%;
 }
 
-.hero__image img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
+.hero__image {
+    max-width: 300px !important;
+    height: 450px !important;
+    overflow: hidden !important;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+    margin: 0 auto !important;
+}
+
+.hero__image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: var(--radius-lg);
 }
 
 /* Background Section */
