@@ -240,7 +240,7 @@
                         <div class="progress-step">4. Confirmation</div>
                     </div>
 
-                    <form id="booking-form" class="booking-form" action="https://formspree.io/f/xqakpjdk" method="POST" enctype="multipart/form-data">
+                    <form id="booking-form" class="booking-form" onsubmit="createBookingEmail(event)")
                         
                         <div class="form-step active" id="step-1">
                             <h3>Select Your Package</h3>
@@ -545,7 +545,7 @@
                     <div class="contact-layout">
                         <div class="contact-form-section">
                             <h3>Send us a message</h3>
-                            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xqakpjdk" method="POST">
+                            <form class="contact-form" id="contact-form" action="mailto:MikeMyersCo@gmail.com" method="POST" enctype="text/plain">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label class="form-label">First Name</label>

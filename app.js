@@ -661,3 +661,49 @@ function showCopyFeedback(message) {
         copyBtn.style.background = '';
     }, 2000);
 }
+
+function createBookingEmail(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    // Get all form values
+    const package = formData.get('package') || 'Not selected';
+    const firstName = formData.get('firstName') || '';
+    const lastName = formData.get('lastName') || '';
+    const email = formData.get('email') || '';
+    const phone = formData.get('phone') || '';
+    const flightHours = formData.get('flightHours') || '';
+    const experience = formData.get('experience') || '';
+    const goals = formData.get('goals') || '';
+    const venmoUsername = formData.get('venmoUsername') || '';
+    const venmoTransactionId = formData.get('venmoTransactionId') || '';
+    
+    // Create email body
+    const subject = 'New Crosswind Coaching Booking';
+    const body = `New Booking Request:
+
+Package: ${package}
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone}
+Flight Hours: ${flightHours}
+Experience: ${experience}
+Goals: ${goals}
+
+Payment Information:
+Venmo Username: ${venmoUsername}
+Transaction ID: ${venmoTransactionId}
+
+Note: Resume file attached (if provided)`;
+    
+    // Create mailto link
+    const mailtoLink = `mailto:MikeMyersCo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    alert('Your email client should now open with the booking information. Please send the email to complete your booking. Don\'t forget to attach your resume if you uploaded one!');
+}
