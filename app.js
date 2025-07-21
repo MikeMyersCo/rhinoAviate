@@ -702,7 +702,7 @@ Transaction ID: ${venmoTransactionId}
 Note: Resume file attached (if provided)`;
     
     // Create mailto link
-    const mailtoLink = `mailto:MikeMyersCo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:Crosswindcoaching@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -742,7 +742,7 @@ Message:
 ${message}`;
     
     // Create mailto link as fallback
-    const mailtoLink = `mailto:MikeMyersCo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:Crosswindcoaching@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Reset button
     submitBtn.disabled = false;
