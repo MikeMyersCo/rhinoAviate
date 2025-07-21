@@ -512,6 +512,9 @@ function prevStep() {
 document.addEventListener('DOMContentLoaded', () => {
     window.aviationSite = new AviationWebsite();
     
+    // Initialize EmailJS
+    emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this
+    
     // Add some interactive enhancements
     addScrollEffects();
     addHoverEffects();
@@ -706,4 +709,48 @@ Note: Resume file attached (if provided)`;
     
     // Show success message
     alert('Your email client should now open with the booking information. Please send the email to complete your booking. Don\'t forget to attach your resume if you uploaded one!');
+}
+
+function sendContactEmail(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const formData = new FormData(form);
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    
+    // For now, use a simple approach that definitely works
+    const firstName = formData.get('firstName') || '';
+    const lastName = formData.get('lastName') || '';
+    const email = formData.get('email') || '';
+    const phone = formData.get('phone') || '';
+    const message = formData.get('message') || '';
+    const consultation = formData.get('consultation') ? 'Yes' : 'No';
+    
+    const subject = 'Crosswind Coaching Contact Form';
+    const body = `New Contact Form Submission:
+
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone}
+Consultation Requested: ${consultation}
+
+Message:
+${message}`;
+    
+    // Create mailto link as fallback
+    const mailtoLink = `mailto:MikeMyersCo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Reset button
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+    
+    // Open email client
+    window.open(mailtoLink);
+    
+    // Show success message
+    alert('Your email client should open with your message. Please send the email to complete your contact request!');
 }
