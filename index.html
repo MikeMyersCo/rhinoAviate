@@ -6,6 +6,7 @@
     <title>Crosswind Coaching, LLC - Helping Pilots Get Hired</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -235,40 +236,25 @@
             <section class="booking-form-section">
                 <div class="container">
                     <div class="booking-progress">
-                        <div class="progress-step active">1. Package Selection</div>
-                        <div class="progress-step">2. Information</div>
-                        <div class="progress-step">3. Payment</div>
+                        <div class="progress-step active">1. Payment & Package</div>
+                        <div class="progress-step">2. Your Information</div>
+                        <div class="progress-step">3. Submit</div>
                         <div class="progress-step">4. Confirmation</div>
                     </div>
 
                     <form id="booking-form" class="booking-form" onsubmit="createBookingEmail(event)")
                         
                         <div class="form-step active" id="step-1">
-                            <h3>Select Your Package</h3>
-                            <div class="package-selection">
-                                <label class="package-option">
-                                    <input type="radio" name="package" value="basic">
-                                    <div class="package-card">
-                                        <h4>Basic Resume Review - $99</h4>
-                                        <p>Comprehensive analysis and feedback</p>
-                                    </div>
-                                </label>
-                                <label class="package-option">
-                                    <input type="radio" name="package" value="premium">
-                                    <div class="package-card">
-                                        <h4>Premium Resume Rewrite - $299</h4>
-                                        <p>Complete rewrite with cover letter</p>
-                                    </div>
-                                </label>
-                                <label class="package-option">
-                                    <input type="radio" name="package" value="linkedin">
-                                    <div class="package-card">
-                                        <h4>LinkedIn Profile Tune-Up - $99</h4>
-                                        <p>Professional LinkedIn optimization</p>
-                                    </div>
-                                </label>
+                            <h3>Select Your Package & Pay</h3>
+                            <div class="stripe-payment-section">
+                                <stripe-pricing-table pricing-table-id="prctbl_1RnUUq2aPjwTIc0EL8ffVNc6"
+                                publishable-key="pk_live_51RnRUh2aPjwTIc0EfWT7UpzQmjTh1GQzVAdqXHwsC0bkhY4EW8hWYCXQF7zS39kTwhcr0vx6QcagtOfBdstUTgT200KB2gHrcS">
+                                </stripe-pricing-table>
                             </div>
-                            <button type="button" class="btn btn--primary" onclick="nextStep()">Continue</button>
+                            <div class="stripe-note">
+                                <p><strong>After completing payment above, please continue to provide your information for service delivery.</strong></p>
+                                <button type="button" class="btn btn--primary" onclick="nextStep()">Continue to Information Form</button>
+                            </div>
                         </div>
 
                         <div class="form-step" id="step-2">
@@ -322,60 +308,23 @@
                         </div>
 
                         <div class="form-step" id="step-3">
-                            <h3>Payment Information</h3>
-                            <div class="payment-summary">
-                                <h4>Order Summary</h4>
-                                <div class="summary-line">
-                                    <span id="selected-package">Package</span>
-                                    <span id="package-price">$0</span>
-                                </div>
-                                <div class="summary-total">
-                                    <strong>Total: <span id="total-price">$0</span></strong>
-                                </div>
-                            </div>
-                            <div class="payment-form" id="venmo-form">
-                                <div class="venmo-instructions">
-                                    <h4>💰 Pay with Venmo</h4>
-                                    <div class="venmo-payment-info">
-                                        <p class="venmo-note">Click the button below to go directly to our Venmo profile and send payment</p>
-                                        <div class="venmo-link">
-                                            <a href="https://www.venmo.com/u/crosswindcoaching" target="_blank" class="btn btn--primary venmo-btn">
-                                                📱 Open Crosswind Coaching on Venmo
-                                            </a>
-                                        </div>
-                                        <p class="venmo-reminder">Please include your name and selected package in the payment note</p>
-                                    </div>
-                                    <div class="venmo-steps">
-                                        <div class="step-item">
-                                            <span class="step-number">1</span>
-                                            <span class="step-text">Click the button above to open our Venmo profile</span>
-                                        </div>
-                                        <div class="step-item">
-                                            <span class="step-number">2</span>
-                                            <span class="step-text">Send the payment amount shown in your order summary</span>
-                                        </div>
-                                        <div class="step-item">
-                                            <span class="step-number">3</span>
-                                            <span class="step-text">Include your name + package in the payment note</span>
-                                        </div>
-                                        <div class="step-item">
-                                            <span class="step-number">4</span>
-                                            <span class="step-text">Return here and complete the form below</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Your Venmo Username/Phone</label>
-                                    <input type="text" class="form-control" name="venmoUsername" placeholder="@your-venmo-username" required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Venmo Transaction ID (after you pay)</label>
-                                    <input type="text" class="form-control" name="venmoTransactionId" placeholder="Enter Venmo transaction ID" required>
+                            <h3>Submit Your Information</h3>
+                            <div class="submission-summary">
+                                <h4>Ready to Submit</h4>
+                                <p>You've completed payment through Stripe and provided your information. Click below to submit your details for service delivery.</p>
+                                <div class="submission-note">
+                                    <p><strong>What happens next:</strong></p>
+                                    <ul>
+                                        <li>You'll receive a confirmation email within 24 hours</li>
+                                        <li>Our team will begin working on your project immediately</li>
+                                        <li>We'll send updates throughout the process</li>
+                                        <li>Expect delivery within the specified turnaround time</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="form-actions">
                                 <button type="button" class="btn btn--secondary" onclick="prevStep()">Back</button>
-                                <button type="submit" class="btn btn--primary">Complete Payment</button>
+                                <button type="submit" class="btn btn--primary">Submit Information</button>
                             </div>
                         </div>
 
