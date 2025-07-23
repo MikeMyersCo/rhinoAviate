@@ -473,6 +473,293 @@ class AviationWebsite {
 }
 
 // Global functions for button clicks
+function openBasicResumeStripe() {
+    console.log('openBasicResumeStripe called');
+    
+    // Check if Stripe pricing table script is loaded
+    if (!customElements.get('stripe-pricing-table')) {
+        console.log('Stripe pricing table not loaded yet, waiting...');
+        // Wait for the script to load
+        setTimeout(() => {
+            if (customElements.get('stripe-pricing-table')) {
+                console.log('Stripe pricing table loaded, retrying...');
+                openBasicResumeStripe();
+            } else {
+                console.error('Stripe pricing table failed to load');
+                alert('Payment system is loading. Please try again in a moment.');
+            }
+        }, 1000);
+        return;
+    }
+    
+    // Remove any existing pricing tables
+    const existingTable = document.querySelector('stripe-pricing-table');
+    if (existingTable) {
+        existingTable.remove();
+    }
+    
+    // Create the pricing table element
+    const pricingTable = document.createElement('stripe-pricing-table');
+    pricingTable.setAttribute('pricing-table-id', 'prctbl_1Rnp6Q2aPjwTIc0ESzNMBHGH');
+    pricingTable.setAttribute('publishable-key', 'pk_live_51RnRUh2aPjwTIc0EfWT7UpzQmjTh1GQzVAdqXHwsC0bkhY4EW8hWYCXQF7zS39kTwhcr0vx6QcagtOfBdstUTgT200KB2gHrcS');
+    
+    console.log('Created pricing table element');
+    
+    // Create modal overlay
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    `;
+    
+    const modal = document.createElement('div');
+    modal.style.cssText = `
+        background: white;
+        border-radius: 8px;
+        max-width: 800px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        padding: 20px;
+    `;
+    
+    const closeButton = document.createElement('button');
+    closeButton.innerHTML = '×';
+    closeButton.style.cssText = `
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+        z-index: 1;
+    `;
+    
+    closeButton.onclick = () => {
+        console.log('Closing modal');
+        overlay.remove();
+    };
+    overlay.onclick = (e) => {
+        if (e.target === overlay) {
+            console.log('Clicked outside modal, closing');
+            overlay.remove();
+        }
+    };
+    
+    modal.appendChild(closeButton);
+    modal.appendChild(pricingTable);
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+    
+    console.log('Modal added to page');
+}
+
+function openPremiumResumeStripe() {
+    console.log('openPremiumResumeStripe called');
+    
+    // Check if Stripe pricing table script is loaded
+    if (!customElements.get('stripe-pricing-table')) {
+        console.log('Stripe pricing table not loaded yet, waiting...');
+        // Wait for the script to load
+        setTimeout(() => {
+            if (customElements.get('stripe-pricing-table')) {
+                console.log('Stripe pricing table loaded, retrying...');
+                openPremiumResumeStripe();
+            } else {
+                console.error('Stripe pricing table failed to load');
+                alert('Payment system is loading. Please try again in a moment.');
+            }
+        }, 1000);
+        return;
+    }
+    
+    // Remove any existing pricing tables
+    const existingTable = document.querySelector('stripe-pricing-table');
+    if (existingTable) {
+        existingTable.remove();
+    }
+    
+    // Create the pricing table element
+    const pricingTable = document.createElement('stripe-pricing-table');
+    pricingTable.setAttribute('pricing-table-id', 'prctbl_1Rnp692aPjwTIc0E31v3x5rQ');
+    pricingTable.setAttribute('publishable-key', 'pk_live_51RnRUh2aPjwTIc0EfWT7UpzQmjTh1GQzVAdqXHwsC0bkhY4EW8hWYCXQF7zS39kTwhcr0vx6QcagtOfBdstUTgT200KB2gHrcS');
+    
+    console.log('Created pricing table element');
+    
+    // Create modal overlay
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    `;
+    
+    const modal = document.createElement('div');
+    modal.style.cssText = `
+        background: white;
+        border-radius: 8px;
+        max-width: 800px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        padding: 20px;
+    `;
+    
+    const closeButton = document.createElement('button');
+    closeButton.innerHTML = '×';
+    closeButton.style.cssText = `
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+        z-index: 1;
+    `;
+    
+    closeButton.onclick = () => {
+        console.log('Closing modal');
+        overlay.remove();
+    };
+    overlay.onclick = (e) => {
+        if (e.target === overlay) {
+            console.log('Clicked outside modal, closing');
+            overlay.remove();
+        }
+    };
+    
+    modal.appendChild(closeButton);
+    modal.appendChild(pricingTable);
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+    
+    console.log('Modal added to page');
+}
+
+function openLinkedInTuneUpStripe() {
+    console.log('openLinkedInTuneUpStripe called');
+    
+    // Check if Stripe pricing table script is loaded
+    if (!customElements.get('stripe-pricing-table')) {
+        console.log('Stripe pricing table not loaded yet, waiting...');
+        // Wait for the script to load
+        setTimeout(() => {
+            if (customElements.get('stripe-pricing-table')) {
+                console.log('Stripe pricing table loaded, retrying...');
+                openLinkedInTuneUpStripe();
+            } else {
+                console.error('Stripe pricing table failed to load');
+                alert('Payment system is loading. Please try again in a moment.');
+            }
+        }, 1000);
+        return;
+    }
+    
+    // Remove any existing pricing tables
+    const existingTable = document.querySelector('stripe-pricing-table');
+    if (existingTable) {
+        existingTable.remove();
+    }
+    
+    // Create the pricing table element
+    const pricingTable = document.createElement('stripe-pricing-table');
+    pricingTable.setAttribute('pricing-table-id', 'prctbl_1Rnp5p2aPjwTIc0Ewd2sZGYM');
+    pricingTable.setAttribute('publishable-key', 'pk_live_51RnRUh2aPjwTIc0EfWT7UpzQmjTh1GQzVAdqXHwsC0bkhY4EW8hWYCXQF7zS39kTwhcr0vx6QcagtOfBdstUTgT200KB2gHrcS');
+    
+    console.log('Created pricing table element');
+    
+    // Create modal overlay
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    `;
+    
+    const modal = document.createElement('div');
+    modal.style.cssText = `
+        background: white;
+        border-radius: 8px;
+        max-width: 800px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        padding: 20px;
+    `;
+    
+    const closeButton = document.createElement('button');
+    closeButton.innerHTML = '×';
+    closeButton.style.cssText = `
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+        z-index: 1;
+    `;
+    
+    closeButton.onclick = () => {
+        console.log('Closing modal');
+        overlay.remove();
+    };
+    overlay.onclick = (e) => {
+        if (e.target === overlay) {
+            console.log('Clicked outside modal, closing');
+            overlay.remove();
+        }
+    };
+    
+    modal.appendChild(closeButton);
+    modal.appendChild(pricingTable);
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+    
+    console.log('Modal added to page');
+}
+
+// Make functions globally available
+window.openBasicResumeStripe = openBasicResumeStripe;
+window.openPremiumResumeStripe = openPremiumResumeStripe;
+window.openLinkedInTuneUpStripe = openLinkedInTuneUpStripe;
+
 function nextStep() {
     if (window.aviationSite.validateCurrentStep()) {
         const nextStep = Math.min(window.aviationSite.currentStep + 1, window.aviationSite.maxSteps);

@@ -61,3 +61,32 @@ The booking form is a 4-step process:
 4. Confirmation
 
 Form validation includes email regex, phone formatting, credit card formatting, and required field checking. All form submissions are currently mocked with setTimeout delays.
+
+## External Dependencies
+
+**Payment Processing:**
+- Stripe (live configuration) - General pricing table: `prctbl_1RnUUq2aPjwTIc0EL8ffVNc6`
+- Basic Resume Review pricing table: `prctbl_1Rnp6Q2aPjwTIc0ESzNMBHGH`
+- Premium Resume Rewrite pricing table: `prctbl_1Rnp692aPjwTIc0E31v3x5rQ`
+- LinkedIn Profile Tune-Up pricing table: `prctbl_1Rnp5p2aPjwTIc0Ewd2sZGYM`
+
+**Email Service:**
+- EmailJS for contact forms (requires public key configuration in app.js:516)
+
+**External Assets:**
+- FKGroteskNeue font from Perplexity R2 CDN
+- Cloudinary images for resources page content
+
+## Local Development
+
+**Serving Files:** Use any local web server (Python's `http.server`, Live Server extension, etc.) to serve static files locally.
+
+**No Package Manager:** This project uses no npm, yarn, or other package managers. All dependencies are loaded via CDN.
+
+**Testing Payment Flow:** Uses live Stripe configuration - test with caution or switch to test keys for development.
+
+## Configuration Notes
+
+- EmailJS public key needs to be replaced from placeholder in `app.js:516`
+- All external service credentials are currently live/production values
+- Contact email: `Crosswindcoaching@gmail.com`
