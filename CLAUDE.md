@@ -69,6 +69,7 @@ Form validation includes email regex, phone formatting, credit card formatting, 
 - Basic Resume Review pricing table: `prctbl_1Rnp6Q2aPjwTIc0ESzNMBHGH`
 - Premium Resume Rewrite pricing table: `prctbl_1Rnp692aPjwTIc0E31v3x5rQ`
 - LinkedIn Profile Tune-Up pricing table: `prctbl_1Rnp5p2aPjwTIc0Ewd2sZGYM`
+- Cover Letter Creation pricing table: `prctbl_1Rnp5I2aPjwTIc0Edql2RQih`
 
 **Email Service:**
 - EmailJS for contact forms (requires public key configuration in app.js:516)
