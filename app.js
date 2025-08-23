@@ -311,68 +311,10 @@ class AviationWebsite {
     }
 
     setupContactForms() {
-        // Contact form submission
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                this.handleContactFormSubmission(contactForm);
-            });
-        }
-
-        // Feedback form submission
-        const feedbackForm = document.querySelector('.feedback-form');
-        if (feedbackForm) {
-            feedbackForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                this.handleFeedbackFormSubmission(feedbackForm);
-            });
-        }
+        // Contact form submission is now handled by the onsubmit attribute
+        // Feedback form submission is now handled by the onsubmit attribute
     }
 
-    handleContactFormSubmission(form) {
-        const formData = new FormData(form);
-        const submitBtn = form.querySelector('button[type="submit"]');
-        
-        // Show loading state
-        submitBtn.classList.add('loading');
-        submitBtn.disabled = true;
-        
-        // Simulate form submission
-        setTimeout(() => {
-            // Reset loading state
-            submitBtn.classList.remove('loading');
-            submitBtn.disabled = false;
-            
-            // Show success message
-            this.showSuccessMessage(form, 'Thank you for your message! We\'ll get back to you within 24 hours.');
-            
-            // Reset form
-            form.reset();
-        }, 2000);
-    }
-
-    handleFeedbackFormSubmission(form) {
-        const formData = new FormData(form);
-        const submitBtn = form.querySelector('button[type="submit"]');
-        
-        // Show loading state
-        submitBtn.classList.add('loading');
-        submitBtn.disabled = true;
-        
-        // Simulate form submission
-        setTimeout(() => {
-            // Reset loading state
-            submitBtn.classList.remove('loading');
-            submitBtn.disabled = false;
-            
-            // Show success message
-            this.showSuccessMessage(form, 'Thank you for sharing your success story!');
-            
-            // Reset form
-            form.reset();
-        }, 2000);
-    }
 
     showSuccessMessage(form, message) {
         // Remove existing success messages
@@ -895,7 +837,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.aviationSite = new AviationWebsite();
     
     // Initialize EmailJS
-    emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this
+    emailjs.init("Fqmo5eMo7jk7OFusd");
     
     // Add some interactive enhancements
     addScrollEffects();
@@ -1104,7 +1046,7 @@ function sendContactEmail(event) {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
     
-    // For now, use a simple approach that definitely works
+    // Get form data
     const firstName = formData.get('firstName') || '';
     const lastName = formData.get('lastName') || '';
     const email = formData.get('email') || '';
@@ -1112,8 +1054,40 @@ function sendContactEmail(event) {
     const message = formData.get('message') || '';
     const consultation = formData.get('consultation') ? 'Yes' : 'No';
     
-    const subject = 'Crosswind Coaching Contact Form';
-    const body = `New Contact Form Submission:
+    // Prepare template parameters for EmailJS
+    const templateParams = {
+        to_email: 'Crosswindcoaching@gmail.com',
+        from_name: `${firstName} ${lastName}`,
+        from_email: email,
+        phone_number: phone,
+        consultation_requested: consultation,
+        message: message,
+        subject: 'Crosswind Coaching Contact Form'
+    };
+    
+    // Try to send via EmailJS first, fallback to mailto if it fails
+    if (typeof emailjs !== 'undefined') {
+        emailjs.send('service_zau8wgp', 'contact_template', templateParams)
+            .then(function(response) {
+                console.log('Contact email sent successfully!', response.status, response.text);
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+                
+                // Show success message
+                alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                form.reset();
+            }, function(error) {
+                console.log('EmailJS failed, using mailto fallback...', error);
+                fallbackToMailto();
+            });
+    } else {
+        console.log('EmailJS not available, using mailto fallback...');
+        fallbackToMailto();
+    }
+    
+    function fallbackToMailto() {
+        const subject = 'Crosswind Coaching Contact Form';
+        const body = `New Contact Form Submission:
 
 Name: ${firstName} ${lastName}
 Email: ${email}
@@ -1122,17 +1096,97 @@ Consultation Requested: ${consultation}
 
 Message:
 ${message}`;
+        
+        // Create mailto link as fallback
+        const mailtoLink = `mailto:Crosswindcoaching@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        // Reset button
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        
+        // Open email client
+        window.open(mailtoLink);
+        
+        // Show success message
+        alert('Your email client should open with your message. Please send the email to complete your contact request!');
+    }
+}
+
+function sendFeedbackEmail(event) {
+    event.preventDefault();
     
-    // Create mailto link as fallback
-    const mailtoLink = `mailto:Crosswindcoaching@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const form = event.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const formData = new FormData(form);
     
-    // Reset button
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Send Message';
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
     
-    // Open email client
-    window.open(mailtoLink);
+    // Get form data
+    const name = formData.get('name') || '';
+    const position = formData.get('position') || '';
+    const experience = formData.get('experience') || '';
+    const rating = formData.get('rating') || '';
     
-    // Show success message
-    alert('Your email client should open with your message. Please send the email to complete your contact request!');
+    // Prepare template parameters for EmailJS
+    const templateParams = {
+        to_email: 'Crosswindcoaching@gmail.com',
+        from_name: name,
+        client_position: position,
+        client_rating: rating,
+        client_experience: experience,
+        subject: 'New Client Feedback - Crosswind Coaching'
+    };
+    
+    // Debug logging
+    console.log('EmailJS available:', typeof emailjs !== 'undefined');
+    console.log('Template params:', templateParams);
+    
+    // Try to send via EmailJS first, fallback to mailto if it fails
+    if (typeof emailjs !== 'undefined') {
+        console.log('Attempting to send via EmailJS...');
+        emailjs.send('service_zau8wgp', 'feedback_template', templateParams)
+            .then(function(response) {
+                console.log('Feedback email sent successfully!', response.status, response.text);
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Feedback';
+                
+                // Show success message
+                alert('Thank you for sharing your feedback! Your review has been sent successfully.');
+                form.reset();
+            }, function(error) {
+                console.log('EmailJS failed, using mailto fallback...', error);
+                fallbackToMailto();
+            });
+    } else {
+        console.log('EmailJS not available, using mailto fallback...');
+        fallbackToMailto();
+    }
+    
+    function fallbackToMailto() {
+        const subject = 'New Client Feedback - Crosswind Coaching';
+        const body = `New Feedback Submission:
+
+Name: ${name}
+Position: ${position}
+Rating: ${rating} stars
+
+Experience:
+${experience}`;
+        
+        // Create mailto link
+        const mailtoLink = `mailto:Crosswindcoaching@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        // Reset button
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Feedback';
+        
+        // Open email client
+        window.open(mailtoLink);
+        
+        // Show success message and reset form
+        alert('Your email client should open with your feedback. Please send the email to share your experience!');
+        form.reset();
+    }
 }

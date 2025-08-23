@@ -360,24 +360,24 @@
                 <div class="container">
                     <div class="feedback-form-section">
                         <h3>Share Your Experience</h3>
-                        <form class="feedback-form">
+                        <form class="feedback-form" id="feedback-form" onsubmit="sendFeedbackEmail(event)">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label class="form-label">Your Name</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" class="form-control" name="name" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Current Position</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" class="form-control" name="position" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Your Experience</label>
-                                <textarea class="form-control" rows="4" placeholder="Tell us about your experience with our services..." required></textarea>
+                                <textarea class="form-control" name="experience" rows="4" placeholder="Tell us about your experience with our services..." required></textarea>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Rating</label>
-                                <select class="form-control" required>
+                                <select class="form-control" name="rating" required>
                                     <option value="">Select rating</option>
                                     <option value="5">⭐⭐⭐⭐⭐ (5 stars)</option>
                                     <option value="4">⭐⭐⭐⭐ (4 stars)</option>
