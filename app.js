@@ -1056,13 +1056,11 @@ function sendContactEmail(event) {
     
     // Prepare template parameters for EmailJS
     const templateParams = {
-        to_email: 'Crosswindcoaching@gmail.com',
-        from_name: `${firstName} ${lastName}`,
-        from_email: email,
-        phone_number: phone,
-        consultation_requested: consultation,
-        message: message,
-        subject: 'Crosswind Coaching Contact Form'
+        name: `${firstName} ${lastName}`,
+        email: email,
+        phone: phone,
+        consultation: consultation,
+        message: message
     };
     
     // Try to send via EmailJS first, fallback to mailto if it fails
@@ -1141,7 +1139,8 @@ function sendFeedbackEmail(event) {
     
     // Debug logging
     console.log('EmailJS available:', typeof emailjs !== 'undefined');
-    console.log('Template params:', templateParams);
+    console.log('NEW Template params:', templateParams);
+    console.log('Using simple variable names now!');
     
     // Try to send via EmailJS first, fallback to mailto if it fails
     if (typeof emailjs !== 'undefined') {
