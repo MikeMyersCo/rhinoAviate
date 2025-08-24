@@ -1060,7 +1060,9 @@ function sendContactEmail(event) {
         email: email,
         phone: phone,
         consultation: consultation,
-        message: message
+        message: message,
+        from_name: `${firstName} ${lastName}`,
+        reply_to: email
     };
     
     // Try to send via EmailJS first, fallback to mailto if it fails
@@ -1129,12 +1131,12 @@ function sendFeedbackEmail(event) {
     
     // Prepare template parameters for EmailJS
     const templateParams = {
-        to_email: 'Crosswindcoaching@gmail.com',
+        name: name,
+        position: position,
+        rating: rating,
+        experience: experience,
         from_name: name,
-        client_position: position,
-        client_rating: rating,
-        client_experience: experience,
-        subject: 'New Client Feedback - Crosswind Coaching'
+        reply_to: 'crosswindcoaching@gmail.com'
     };
     
     // Debug logging
